@@ -1,0 +1,1 @@
+{"version":3,"file":"unit-of-work.port.d.ts","sourceRoot":"","sources":["../../../../src/ledger/usecases/ports/unit-of-work.port.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,iBAAiB,EAAE,MAAM,6BAA6B,CAAC;AAEhE,MAAM,WAAW,WAAW;IAC1B,OAAO,CAAC,CAAC,EAAE,IAAI,EAAE,CAAC,YAAY,EAAE;QAAE,UAAU,EAAE,iBAAiB,CAAA;KAAE,KAAK,OAAO,CAAC,CAAC,CAAC,GAAG,OAAO,CAAC,CAAC,CAAC,CAAC;CAC/F"}

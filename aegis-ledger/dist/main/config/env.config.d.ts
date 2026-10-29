@@ -1,0 +1,54 @@
+import { z } from 'zod';
+declare const envSchema: z.ZodObject<{
+    NODE_ENV: z.ZodDefault<z.ZodEnum<["development", "production", "test"]>>;
+    PORT: z.ZodDefault<z.ZodNumber>;
+    HOST: z.ZodDefault<z.ZodString>;
+    LOG_LEVEL: z.ZodDefault<z.ZodEnum<["fatal", "error", "warn", "info", "debug", "trace"]>>;
+    DATABASE_URL: z.ZodOptional<z.ZodString>;
+    DB_HOST: z.ZodDefault<z.ZodString>;
+    DB_PORT: z.ZodDefault<z.ZodNumber>;
+    DB_USER: z.ZodDefault<z.ZodString>;
+    DB_PASSWORD: z.ZodDefault<z.ZodString>;
+    DB_NAME: z.ZodDefault<z.ZodString>;
+    DB_POOL_MIN: z.ZodDefault<z.ZodNumber>;
+    DB_POOL_MAX: z.ZodDefault<z.ZodNumber>;
+    DB_STATEMENT_TIMEOUT_MS: z.ZodDefault<z.ZodNumber>;
+    DB_IDLE_TIMEOUT_MS: z.ZodDefault<z.ZodNumber>;
+    PESSIMISTIC_LOCK_TIMEOUT_MS: z.ZodDefault<z.ZodNumber>;
+}, "strip", z.ZodTypeAny, {
+    NODE_ENV: "development" | "production" | "test";
+    PORT: number;
+    HOST: string;
+    LOG_LEVEL: "error" | "fatal" | "warn" | "info" | "debug" | "trace";
+    DB_HOST: string;
+    DB_PORT: number;
+    DB_USER: string;
+    DB_PASSWORD: string;
+    DB_NAME: string;
+    DB_POOL_MIN: number;
+    DB_POOL_MAX: number;
+    DB_STATEMENT_TIMEOUT_MS: number;
+    DB_IDLE_TIMEOUT_MS: number;
+    PESSIMISTIC_LOCK_TIMEOUT_MS: number;
+    DATABASE_URL?: string | undefined;
+}, {
+    DATABASE_URL?: string | undefined;
+    NODE_ENV?: "development" | "production" | "test" | undefined;
+    PORT?: number | undefined;
+    HOST?: string | undefined;
+    LOG_LEVEL?: "error" | "fatal" | "warn" | "info" | "debug" | "trace" | undefined;
+    DB_HOST?: string | undefined;
+    DB_PORT?: number | undefined;
+    DB_USER?: string | undefined;
+    DB_PASSWORD?: string | undefined;
+    DB_NAME?: string | undefined;
+    DB_POOL_MIN?: number | undefined;
+    DB_POOL_MAX?: number | undefined;
+    DB_STATEMENT_TIMEOUT_MS?: number | undefined;
+    DB_IDLE_TIMEOUT_MS?: number | undefined;
+    PESSIMISTIC_LOCK_TIMEOUT_MS?: number | undefined;
+}>;
+export type EnvConfig = z.infer<typeof envSchema>;
+export declare function loadEnvConfig(): EnvConfig;
+export {};
+//# sourceMappingURL=env.config.d.ts.map

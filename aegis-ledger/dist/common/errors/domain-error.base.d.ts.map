@@ -1,0 +1,1 @@
+{"version":3,"file":"domain-error.base.d.ts","sourceRoot":"","sources":["../../../src/common/errors/domain-error.base.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH,8BAAsB,WAAY,SAAQ,KAAK;IAC7C,kBAAyB,IAAI,EAAE,MAAM,CAAC;gBAE1B,OAAO,EAAE,MAAM;CAK5B"}
